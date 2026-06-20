@@ -1,17 +1,30 @@
+package cocuk;
+
+import ata.Hayvanlarım;
+
 public class Kedi extends Hayvanlarım {
+
 
     private boolean tekirMi;
 
 
-    Kedi(){
-        super("kedi");
+    public Kedi(){
+        super();
     }
 
-    public void sesCikar(){
 
-        System.out.println("miyavlıyor");
-        super.sesCikar();
-    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -22,4 +35,6 @@ public class Kedi extends Hayvanlarım {
     public void setTekirMi(boolean tekirMi) {
         this.tekirMi = tekirMi;
     }
+
+
 }

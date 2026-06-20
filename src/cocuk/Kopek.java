@@ -1,3 +1,6 @@
+package cocuk;
+
+import ata.Hayvanlarım;
 
 public class Kopek extends Hayvanlarım {
 
@@ -5,12 +8,17 @@ public class Kopek extends Hayvanlarım {
 
 
 
-    Kopek(String cins){
+    public Kopek(String cins){
         super(cins);
     }
 
+
+
+
+
+    @Override
     public void sesCikar(){
-        System.out.println("havlıyor");
+        System.out.println("ucuyor");
     }
 
 

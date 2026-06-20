@@ -1,5 +1,6 @@
-import java.util.List;
-import java.util.Scanner;
+import cocuk.GocmenKus;
+import cocuk.Kedi;
+import cocuk.Kus;
 
 public class App {
 
@@ -9,29 +10,52 @@ public class App {
 
     public static void main(String[] args) {
 
-        Kopek [] kopeklerim= new Kopek[3];
+        // Kuş nesnesi oluşturup özellik verelim
+        Kus kus = new Kus("Serçe");
+        kus.setAd("Minik");
+        kus.setBoy(14);
+        kus.setKilo(25);
+        kus.setRenk("Gri-Kahve");
+        kus.setUcabilirMi(true);
+        kus.setKanatGenisligi(18);
 
-        Kopek k1 = new Kopek("pekinez");
-        k1.setAd("matija");
-        k1.setKilo(15);
-        k1.setSaldirganMi(true);
-        k1.sesCikar();
+        System.out.println("--- Kus Bilgileri ---");
+        System.out.println("Ad: " + kus.getAd());
+        System.out.println("Cins: " + kus.getCins());
+        System.out.println("Boy: " + kus.getBoy());
+        System.out.println("Kilo: " + kus.getKilo());
+        System.out.println("Renk: " + kus.getRenk());
+        System.out.println("Kanat Genisligi: " + kus.getKanatGenisligi());
+        kus.sesCikar();
+        kus.uc();
+        kus.tuyleriniTemizie();
 
-        kopeklerim[0]=k1;
+        // Göçmen kuş örneği
+        GocmenKus gocmen = new GocmenKus();
+        gocmen.setAd("Leyla");
+        gocmen.setGocMen(true);
+        gocmen.setYemekSakladiMi(true);
 
-        Kopek k2= new Kopek("Kangal");
+        System.out.println("\n--- Gocmen Kus ---");
+        System.out.println("Ad: " + gocmen.getAd());
+        System.out.println("Cins: " + gocmen.getCins());
+        gocmen.sesCikar();
+        gocmen.gocuYap();
 
-        kopeklerim[1]=k2;
+        // Kedi örneği
+        Kedi kedi = new Kedi();
+        kedi.setAd("Pamuk");
+        kedi.setTekirMi(true);
+        System.out.println("\n--- Kedi ---");
+        System.out.println("Ad: " + kedi.getAd());
+        System.out.println("Tekir mi: " + kedi.isTekirMi());
+        kedi.sesCikar();
 
     }
-
-    
-    public static void test(Kopek[] kopeklerim){
-        System.out.println(kopeklerim[0].getAd());
-
-        System.out.println(kopeklerim[1].isSaldirganMi());
-
-    }
-
 
 }
+
+
+
+
+

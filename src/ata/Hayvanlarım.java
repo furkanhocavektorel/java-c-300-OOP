@@ -1,3 +1,5 @@
+package ata;
+
 public class Hayvanlarım {
 
     private String ad;
@@ -8,14 +10,47 @@ public class Hayvanlarım {
     private String renk;
     private boolean disiMi;
 
-
     public void sesCikar(){
         System.out.println("sesleniyor");
     }
 
-    Hayvanlarım(String cins){
+
+
+
+
+
+
+
+
+
+
+
+    protected Hayvanlarım(){
+    }
+
+
+
+
+
+
+
+
+    public Hayvanlarım(String cins){
         this.cins=cins;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public String getAd() {
         return ad;
