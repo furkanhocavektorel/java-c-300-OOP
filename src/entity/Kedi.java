@@ -1,32 +1,11 @@
-package cocuk;
+package entity;
 
-import ata.Hayvanlarım;
+import entity.base.Hayvanlarım;
 
+// POJO  - plain old java object
 public class Kedi extends Hayvanlarım {
 
-
     private boolean tekirMi;
-
-
-    public Kedi(){
-        super();
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public boolean isTekirMi() {
         return tekirMi;

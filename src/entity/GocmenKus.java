@@ -1,14 +1,8 @@
-package cocuk;
+package entity;
 
-public class GocmenKus extends Kus{
+public class GocmenKus extends Kus {
 
     private boolean yemekSakladiMi;
-
-
-    @Override
-    public void sesCikar() {
-        System.out.println("leylek bagırıyor");
-    }
 
     public boolean isYemekSakladiMi() {
         return yemekSakladiMi;

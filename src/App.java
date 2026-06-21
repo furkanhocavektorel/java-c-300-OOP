@@ -1,55 +1,69 @@
-import cocuk.GocmenKus;
-import cocuk.Kedi;
-import cocuk.Kus;
+import entity.Kedi;
+import entity.Kopek;
+import entity.Kus;
+import entity.Musteriler;
+import servis.KediEylemi;
+import servis.KopekEylemi;
+import servis.KusEylemi;
+import servis.MusteriEylemi;
 
 public class App {
 
-    // OOP Object Oriented Programing
+    // OOP Object Oriented Programing 4 madde var
     // Encapsulation - Kapsülleme
     // inheritence miras alma - kalıtım
+    // polymorphism - çok biçimlilik
+    // abstraction - soyutlama
 
     public static void main(String[] args) {
 
-        // Kuş nesnesi oluşturup özellik verelim
-        Kus kus = new Kus("Serçe");
-        kus.setAd("Minik");
-        kus.setBoy(14);
-        kus.setKilo(25);
-        kus.setRenk("Gri-Kahve");
-        kus.setUcabilirMi(true);
-        kus.setKanatGenisligi(18);
+        Kopek kopek1 = new Kopek("kangal");
+        kopek1.setAd("karabas");
+        Kopek kopek2 = new Kopek("alman");
+        kopek2.setAd("sementa");
 
-        System.out.println("--- Kus Bilgileri ---");
-        System.out.println("Ad: " + kus.getAd());
-        System.out.println("Cins: " + kus.getCins());
-        System.out.println("Boy: " + kus.getBoy());
-        System.out.println("Kilo: " + kus.getKilo());
-        System.out.println("Renk: " + kus.getRenk());
-        System.out.println("Kanat Genisligi: " + kus.getKanatGenisligi());
-        kus.sesCikar();
-        kus.uc();
-        kus.tuyleriniTemizie();
+        Kedi kedi= new Kedi();
+        kedi.setAd("pamuk");
 
-        // Göçmen kuş örneği
-        GocmenKus gocmen = new GocmenKus();
-        gocmen.setAd("Leyla");
-        gocmen.setGocMen(true);
-        gocmen.setYemekSakladiMi(true);
+        Kus kus=new Kus();
+        kus.setAd("boncuk");
 
-        System.out.println("\n--- Gocmen Kus ---");
-        System.out.println("Ad: " + gocmen.getAd());
-        System.out.println("Cins: " + gocmen.getCins());
-        gocmen.sesCikar();
-        gocmen.gocuYap();
+        KopekEylemi kopekEylemi = new KopekEylemi();
+        kopekEylemi.kovala(kopek1);
+        kopekEylemi.suIc(kopek2);
 
-        // Kedi örneği
-        Kedi kedi = new Kedi();
-        kedi.setAd("Pamuk");
-        kedi.setTekirMi(true);
-        System.out.println("\n--- Kedi ---");
-        System.out.println("Ad: " + kedi.getAd());
-        System.out.println("Tekir mi: " + kedi.isTekirMi());
-        kedi.sesCikar();
+        KediEylemi kediEylemi=new KediEylemi();
+        kediEylemi.sesCikar(kedi);
+
+        KusEylemi kusEylemi=new KusEylemi();
+        kusEylemi.sesCikar(kus);
+        kusEylemi.suIc(kus);
+        kusEylemi.suIc(kus);
+
+
+        kediEylemi.sesCikar(kedi);
+
+        kopekEylemi.suIc(kopek2);
+
+
+        Musteriler musteri= new Musteriler();
+
+        musteri.setBorc(500d);
+
+        System.out.println("musterinin borcu: "+musteri.getBorc());
+        musteri.setBorcluGunSayisi(15);
+
+        MusteriEylemi musteriEylemi= new MusteriEylemi();
+
+        musteriEylemi.borcKatla(musteri);
+
+        System.out.println("musterinin yeni borcu: "+ musteri.getBorc());
+
+
+
+
+
+
 
     }
 

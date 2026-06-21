@@ -1,6 +1,6 @@
-package ata;
+package entity.base;
 
-public class Hayvanlarım {
+public abstract class Hayvanlarım {
 
     private String ad;
     private String cins ;
@@ -10,47 +10,12 @@ public class Hayvanlarım {
     private String renk;
     private boolean disiMi;
 
-    public void sesCikar(){
-        System.out.println("sesleniyor");
-    }
-
-
-
-
-
-
-
-
-
-
-
-
     protected Hayvanlarım(){
     }
-
-
-
-
-
-
-
 
     public Hayvanlarım(String cins){
         this.cins=cins;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public String getAd() {
         return ad;
